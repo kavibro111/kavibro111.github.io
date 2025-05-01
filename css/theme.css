@@ -1,0 +1,77 @@
+/* Light Mode (Default) */
+:root {
+    --primary-color: #4D6A3F; /* Olive green matching hoodie */
+    --secondary-color: #617B52; /* Lighter green */
+    --accent-color: #8A6D3B; /* Complementary warm brown */
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --border-color: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --gradient-start: rgba(77, 106, 63, 0.7);
+    --gradient-middle: rgba(77, 106, 63, 0.4);
+    --gradient-end: rgba(77, 106, 63, 0);
+    --bg-nav: rgba(255, 255, 255, 0.9);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --primary-color: #5A7A4C; /* Brighter olive in dark mode */
+    --secondary-color: #708B61; /* Lighter green */
+    --accent-color: #9D7E4B; /* Warmer accent for dark mode */
+    --text-primary: #f9fafb;
+    --text-secondary: #e5e7eb;
+    --bg-primary: #1A2213; /* Dark olive background */
+    --bg-secondary: #2A3C1E; /* Slightly lighter dark olive */
+    --border-color: #374151;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --gradient-start: rgba(90, 122, 76, 0.8);
+    --gradient-middle: rgba(90, 122, 76, 0.5);
+    --gradient-end: rgba(90, 122, 76, 0);
+    --bg-nav: rgba(26, 34, 19, 0.9);
+}
+
+/* Dark Mode - Background Elements */
+body.dark-mode header {
+    background-color: rgba(26, 34, 19, 0.8); /* Dark olive with transparency */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+/* For dark mode */
+body.dark-mode .mobile-menu-active {
+    background: linear-gradient(
+        to bottom,
+        var(--bg-nav) 0%,
+        var(--bg-primary) 100%
+    );
+}
+
+body.dark-mode .toggle-ball {
+    transform: translateX(30px);
+}
+
+/* Transition for All Elements */
+body, 
+header, 
+.toggle-ball, 
+.btn, 
+input, 
+textarea {
+    transition: all 0.3s ease;
+}
+
+/* Fix for header in light mode */
+header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+/* In css/theme.css */
+.mobile-menu-active {
+    background: linear-gradient(
+        to bottom,
+        var(--bg-nav) 0%,
+        var(--bg-primary) 100%
+    );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}

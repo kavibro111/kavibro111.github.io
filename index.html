@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavish Nanayakkara</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Theme Switcher -->
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- Additional Styles -->
+    <style>
+        .achievement-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <div class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-logo">
+                <svg class="splash-icon" viewBox="0 0 100 100">
+                    <circle class="splash-circle" cx="50" cy="50" r="45" fill="none" stroke="var(--primary-color)" stroke-width="2"/>
+                    <path class="splash-leaf" d="M50 25 C60 25, 75 35, 75 50 C75 65, 60 75, 50 75 C40 75, 25 65, 25 50 C25 35, 40 25, 50 25" fill="none" stroke="var(--primary-color)" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="splash-text">Loading...</div>
+        </div>
+    </div>
+    <!-- Three.js Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <div class="toggle-ball"></div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal-text" ">Hi, I'm <span class="highlight">Kavish</span></h1>
+                <h2 class="reveal-text">Software Engineer, AI/ML Engineer and Researcher</h2>
+                <p class="reveal-text">I specialize in building intelligent applications using cutting-edge AI and ML technologies</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary">Get In Touch</a>
+                    <a href="#projects" class="btn secondary">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./Images/profile-image3.png" alt="Profile Image">
+                <div class="floating-shape shape1"></div>
+                <div class="floating-shape shape2"></div>
+                <div class="floating-shape shape3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a passionate Computer Scientist with expertise in Software Engineering, AI/ML Engineering and Research. I specialize in building intelligent/agentic applications that leverage the latest advancements in artificial intelligence and machine learning.</p>
+                    <p>My technical versatility spans across full-stack development, cloud infrastructure, and AI frameworks, allowing me to deliver comprehensive solutions from concept to deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <!-- AI/ML -->
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>PyTorch</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>TensorFlow</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Langchain</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Semantic Kernel</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Crew AI</h3>
+                </div>
+                <!-- Data Science -->
+                <div class="skill-card">
+                    <i class="fas fa-table"></i>
+                    <h3>Pandas</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Matplotlib</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-area"></i>
+                    <h3>Plotly</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>NumPy</h3>
+                </div>
+                <!-- Backend -->
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-microsoft"></i>
+                    <h3>.NET</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>FastAPI</h3>
+                </div>
+                <!-- Frontend -->
+                <div class="skill-card">
+                    <i class="fab fa-angular"></i>
+                    <h3>Angular</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>Next.js</h3>
+                </div>
+                <!-- Languages -->
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js-square"></i>
+                    <h3>TypeScript</h3>
+                </div>
+                <!-- Database -->
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>MongoDB</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-table"></i>
+                    <h3>SQL</h3>
+                </div>
+                <!-- DevOps -->
+                <div class="skill-card">
+                    <i class="fab fa-docker"></i>
+                    <h3>Docker</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-dharmachakra"></i>
+                    <h3>Kubernetes</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-microsoft"></i>
+                    <h3>Azure</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./Images/projects/RevisePlus.PNG" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Revise Plus</h3>
+                        <p>AI driven Educational Platform. Developed the AI engine and core AI Algorithms for Agents.</p>
+                        <div class="project-links">
+                            <a href="https://revise-plus.com" class="btn small">View Live</a>
+                            <a href="#" class="btn small secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./Images/projects//TwinkleBun.PNG" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Twinkle Bun</h3>
+                        <p>An interactive Mobile application for Education domain to ease learning math and other subjects.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn small">View Live</a>
+                            <a href="#" class="btn small secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./Images/projects/IITRASwebsite.PNG" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>First IEEE RAS Website at IIT</h3>
+                        <p>A web site done using React+Vite for RAS chapter of IEEE student branch of Informatics Institute of Technology.</p>
+                        <div class="project-links">
+                            <a href="https://ras.iit.ac.lk/" class="btn small">View Live</a>
+                            <a href="#" class="btn small secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <img src="./Images/achievements/Provincial Competition Winners.jpeg" alt="Provincial Competition Winners" class="achievement-img">
+                    </div>
+                    <h3>Provincial Competition Winner</h3>
+                    <p>Recognition for Winning IEEE INSL Competition 2023 from Colombo North.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <img src="./Images/achievements/IMG-20240305-WA0045.jpg" alt="Achievement" class="achievement-img">
+                    </div>
+                    <h3>Island Competition Winner</h3>
+                    <p>Recognition for Winning IEEE INSL Competition 2023 from entire country out of 1000+ teams.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <img src="./Images/achievements/img_10_1733412675434.jpg" alt="Technical Award" class="achievement-img">
+                    </div>
+                    <h3>Excellence Award</h3>
+                    <p>Secured an Award at Excellence Awards at IIT 2024.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <img src="./Images/achievements/img_4_1703527066202.jpg" alt="Award" class="achievement-img">
+                    </div>
+                    <h3>AI Hackathon 2023 1st Runners Up</h3>
+                    <p>Became the 1st Runners up from AI Hackathon 2023 for developing a complete web application that includes a chat bot within 4 hours. (Organized by AI Driven Sri Lanka)</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <img src="./Images/achievements/hackx.jpg" alt="Certification" class="achievement-img">
+                    </div>
+                    <h3>HackX 8.0 Finalist</h3>
+                    <p>Got selected into the top 15 teams competing with 200+ teams from 15+ different universities in Sri Lanka, organised by the Industrial Management Science Students' Association Department Of Industrial Management Faculty of Science, University of Kelaniya.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <img src="./Images/achievements/img_2_1697636405937.jpg" alt="Certification" class="achievement-img">
+                    </div>
+                    <h3>Participation in Coders 2023</h3>
+                    <p>A competitive Programming competition Organised by University of Peradeniya.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <img src="./Images/achievements/345908026_212825338171188_3955016049672823818_n.jpg" alt="Recognition" class="achievement-img">
+                    </div>
+                    <h3>CYPHER - Capture The Flag Competition 2023</h3>
+                    <p>Participated in Cypher capture the flag competition organised by IEEE WIE Student Branch Affinity Group of KDU.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>kavishdivcoder@gmail.com</p>
+                    </div>
+                    <!-- <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (123) 456-7890</p>
+                    </div> -->
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Colombo, Sri Lanka</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/kavishdiv2000"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/kavish-nanayakkara-13a126253"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kavish's Portfolio website. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Javascript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.12.16/dist/framer-motion.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/three-background.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
